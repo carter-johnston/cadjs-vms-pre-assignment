@@ -1,4 +1,6 @@
 # Volunteer Management System
+**Instructions:** [click here](./resources/assignment-instructions.pdf)
+**Process Map:** [click here](./resources/images/diagram.png)
 ## Contributors
 * Jacob Schipman
 * Aaron Goldstein
@@ -11,7 +13,7 @@
 * EJs
 
 ## Startup Guide
-**Instructions:** [click here](./resources/assignment-instructions.pdf)
+
 
 
 
