@@ -11,7 +11,7 @@
 * EJs
 
 ## Startup Guide
-
+**Instructions:** [click here](./resources/assignment-instructions.pdf)
 
 
 
