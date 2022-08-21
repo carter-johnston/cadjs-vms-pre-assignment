@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPPORTUNITY</title>
+    <title>Opportunities List</title>
 </head>
 <body>
-    
+    <div style="text-align: center;">
+        <h1>Opportunities</h1>
+        <ul>
+            <% oppList.forEach(function(item,index){ %>
+                <li> (<%= index+1 %>) <%= item.organization %> - <%= item.desc %> - <%= item.date %> </li>
+            <% }) %>
+        </ul>
+    </div>
 </body>
 </html>

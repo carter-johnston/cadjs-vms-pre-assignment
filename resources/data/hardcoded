@@ -1,0 +1,56 @@
+let opportunity = [
+  {
+    id: uuid(),
+    opportunityName: "Food Bank at Bill's Warehouse",
+    description: "Bag food to help the poor pay the bills!"
+  },
+  {
+    id: uuid(),
+    opportunityName: "Find homes for beautiful black cats",
+    description: "For all you awesome cat lovers out there, dog owners not allowed."
+  },
+  {
+    id: uuid(),
+    opportunityName: "Salvage the shipwreck off Michigan coast.",
+    description: "On the twenty six of September, there will be a schip wreck, and volunteers will be needed to help salvage the items that were intended for an elderly home."
+  }
+]
+
+let volunteers = [
+  {
+    id: uuid(),
+    name: "Carter Johnston",
+    size: "Large",
+    bestRole: "Construction and Heavy Labor",
+    isDogOwner: true,
+    username: "CarterTheJ",
+    password: "ilovefishing"
+  },
+  {
+    id: uuid(),
+    name: "Justin Schipwreck",
+    size: "Medium",
+    bestRole: "Ship Captain",
+    username: "shipwrecked",
+    password: "imagoodpilot",
+    isDogOwner: false,
+  },
+  {
+    id: uuid(),
+    name: "Dhori Mato",
+    size: "Medium",
+    bestRole: "IT and Technology Support",
+    username: "tomato",
+    password: "tomatotomatoh",
+    isDogOwner: false
+  },
+  {
+    id: uuid(),
+    name: "Aaron Goldstein",
+    size: "Small",
+    bestRole: "Lead Manager",
+    username: "ditto",
+    password: "dittoisthebestpokemon",
+    isDogOwner: false
+  }
+]
