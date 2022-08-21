@@ -3,10 +3,7 @@
 
 **Process Map:** [click here](./resources/images/diagram.png)
 ## Contributors
-* Jacob Schipman
-* Aaron Goldstein
-* Dhori Mato
-* Carter Johnston
+Jacob Schipman  |  Aaron Goldstein | Dhori Mato | Carter Johnston
 ## Technologies
 * NodeJs
 * ExpressJs
