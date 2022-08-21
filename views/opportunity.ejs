@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opportunities List</title>
     <link rel="stylesheet" href="../resources/css/site.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
@@ -38,8 +39,10 @@
 <body>
     <div style="text-align: center;">
         <h1>Opportunities</h1>
-        <input id="myInput" type="text" placeholder="Search..">
-        <br><br>
+        <p>
+            <button onclick="document.getElementById('id01').style.display='block'">Search</button>
+            <button onclick="document.getElementById('id02').style.display='block'">Filter</button>
+        </p>
         <table>
             <thead>
                 <tr>
@@ -55,11 +58,44 @@
                         <td><%= item.organization %></td>
                         <td><%= item.desc %></td>
                         <td><%= item.date %></td>
-                        <td><p><button>Edit</button><button>Delete</button></p></td>  
+                        <td>
+                            <p>
+                                <button id="edit" value="<%= item.id %>">Edit</button>
+                                <button id="delete" value="<%= item.id %>">Delete</button>
+                            </p>
+                        </td>  
                     </tr>
                 <% }) %>
             </tbody>
         </table>
+        <p>
+            <a href="../login"><button>Logout</button></a> 
+            <a href="../"><button>Back</button></a> 
+        </p>
+            
+          
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div>
+                        <input id="myInput" type="text" placeholder="Search..">
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="id02" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div>
+                        <p>Most Recent(60 Days) <input type="radio"></p>
+                        <p>By Center <input type="radio"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
