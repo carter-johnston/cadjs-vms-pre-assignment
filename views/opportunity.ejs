@@ -5,15 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opportunities List</title>
+    <link rel="stylesheet" href="../resources/css/site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
     <div style="text-align: center;">
         <h1>Opportunities</h1>
-        <ul>
-            <% oppList.forEach(function(item,index){ %>
-                <li> (<%= index+1 %>) <%= item.organization %> - <%= item.desc %> - <%= item.date %> </li>
-            <% }) %>
-        </ul>
+        <input id="myInput" type="text" placeholder="Search..">
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>organization</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <% oppList.forEach(function(item,index){ %>
+                    <tr>
+                        <td><%= item.organization %></td>
+                        <td><%= item.desc %></td>
+                        <td><%= item.date %></td>
+                        <td><p><button>Edit</button><button>Delete</button></p></td>  
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
