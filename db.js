@@ -19,7 +19,7 @@ module.exports = async (action,contents) => {
             await findVolunteer();
         }
         else if(action == 'delete'){
-            await updateVolunteer();
+            await deleteVolunteer();
         }
     }catch(e){
         console.error(e);
