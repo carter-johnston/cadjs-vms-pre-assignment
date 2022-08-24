@@ -29,8 +29,8 @@ module.exports = async (action,contents) => {
 }
 
 async function Credentials(){
-    Temp.Uname = 'SteinTech';
-    Temp.Pword = 'Schipwreck';
+    Temp.Uname = '';
+    Temp.Pword = '';
 }
 
 async function findVolunteer(){ // used for display of all that meet the criteria looking to expand for multi-filtering
